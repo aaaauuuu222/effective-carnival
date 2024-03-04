@@ -1,0 +1,24 @@
+.keyboard {
+    display: flex;
+    flex-direction: column;  /* キーボードの行を縦方向にスタック */
+    align-items: center;     /* 子要素を水平方向に中央に配置 */
+}
+.key {
+    padding: 5px 10px;
+    border: 1px solid #bbbbbb;
+    margin: 2px;
+    text-align: center;
+    transition: background-color 0.3s;
+    display: inline-block;  /* これにより、キーはインライン要素として振る舞い、縦にスタックされることはありません */
+}
+
+.key.pressed {
+    background-color: #cccccc; /* キーが押されたときの背景色を灰色に設定 */
+}
+
+.key-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5px;  /* 各行の間隔を空けるため */
+}

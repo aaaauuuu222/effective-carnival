@@ -1,0 +1,25 @@
+.sidebar {
+    position: fixed;
+    top: 10%; /* 上端から50%の位置に設定 */
+    bottom: 10%; /* 下端から10%の位置に設定 */
+    left: 0;
+    transform: translateY(-50%); /* Y軸方向に自身の高さの50%だけ上に移動 */
+    width: 250px; /* サイドバーの幅 */
+
+    overflow-y: auto;
+    background-color: #000;
+    color: #fff; /* テキストの色を白に設定 */
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(-90%);
+    transition: transform 0.3s ease;
+    z-index: 1000; /* メニューが他の要素の上に表示されるように */
+  }
+  
+  .sidebar.visible {
+    transform: translateX(0);
+  }
+
+  .sidebar li .hover-text:hover {
+    color: red; /* ホバー時に特定の文字の色を赤に変更 */
+}

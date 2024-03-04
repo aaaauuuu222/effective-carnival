@@ -1,0 +1,30 @@
+/* Additional styles if needed */
+.wiki-sidebar {
+    background-color: #f3f4f6;
+}
+.wiki-content {
+    background-color: #ffffff;
+}
+.wiki-header {
+    background-color: #e5e7eb;
+}
+
+.top-contents-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh; /* ビューポートの高さに合わせる */
+}
+  
+.top-contents {
+  text-align: center;
+}
+.liStyle:hover {
+  color: green; /* カーソルが重なったときの文字色を緑色に設定 */
+}
+
+body{
+    background-image: url('../images/arkTitle.jpg'); /* 画像のパスを指定 */
+    background-size: cover; /* 画像がコンテナを覆うように設定 */
+    background-repeat: no-repeat; /* 画像が繰り返されないように設定 */
+}

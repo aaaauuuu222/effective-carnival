@@ -1,0 +1,196 @@
+/* AizTshirtHeaderPartsの基本スタイリング */
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  
+}
+
+.upper-header,
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  
+}
+
+.upper-header {
+  background-color: #3b0033; /* 上部ヘッダーの背景色 */
+  border-bottom: 1px solid #319631;
+}
+
+.main-header {
+  background-color: #ffffff; /* メインヘッダーの背景色 */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  display: block;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ロゴのスタイリング */
+.logo {
+  font-size: 1.5rem;
+  color: #333;
+  text-decoration: none;
+}
+
+
+.upper-header .logo img {
+  height: 60px; /* ロゴの高さ */
+  width: 60px; /* 幅は自動調整 */
+  /* 画像が非常に大きい場合は、max-widthを設定するのが良いでしょう */
+  max-width: 100%; /* コンテナの幅を超えないようにする */
+}
+
+/*一段目ヘッダー　ライン*/
+.upper-header nav ul li {
+  margin-right: 1rem;
+  padding-right: 1rem;
+  border-right: 1px solid #ddd; /* 線のスタイル */
+  display: inline-block;
+}
+
+.upper-header nav ul li:last-child {
+  border-right: none; /* 最後の項目には線を表示しない */
+}
+.upper-header {
+  display: flex;
+  justify-content: center; /* 水平方向の中央寄せ */
+  align-items: center; /* 垂直方向の中央寄せ */
+  padding: 0.5rem 1rem;
+  background-color: rgb(248, 248, 248); /* 背景色 */
+}
+.upper-header nav ul {
+  display: flex;
+  justify-content: center; /* アイテムを中央に配置 */
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.upper-header nav ul li {
+  flex: 1; /* 各アイテムが均等なスペースを取るように設定 */
+  text-align: center; /* テキストをリストアイテムの中央に配置 */
+  margin: 0; /* または、均等なマージンを設定する */
+  padding: 0 10px; /* 適宜調整 */
+  white-space: nowrap; /* テキストが折り返されないようにする */
+}
+
+.upper-header nav ul li a {
+  display: block; /* リンクをブロック要素として扱い、幅を取るようにする */
+}
+
+.upper-header nav ul li:last-child {
+  border-right: none; /* 最後の項目の右側境界線を削除 */
+}
+
+
+/* スマートフォンなど小さい画面用のメディアクエリ */
+@media (max-width: 768px) { /* 768px以下の画面幅で適用されるスタイル */
+  .upper-header {
+    /* スマートフォン表示時のヘッダーのスタイル調整 */
+    padding: 0.5em 1em; /* パディングを小さくする */
+  }
+
+  .upper-header nav ul {
+    justify-content: space-around; /* アイテム間の余白を調整 */
+  }
+
+  .upper-header nav ul li {
+    margin: 0; /* マージンを減らすかリセットする */
+    padding: 0.5em; /* パディングを小さくする */
+  }
+
+  .upper-header nav ul li a {
+    font-size: 0.8em; /* リンクのフォントサイズを小さくする */
+  }
+
+
+
+  /* ロゴのサイズ調整も必要であればここで行う */
+  .upper-header .logo img {
+    width: auto; /* 幅の調整 */
+    height: 40px; /* 高さを40pxなどにする */
+  }
+
+  /* 必要に応じて他のスタイルも追加 */
+}
+
+
+/* 二段目ヘッダーのスタイル */
+.main-header nav ul {
+  list-style: none;
+  padding-left: 0; /* リセットリストスタイル */
+  display: flex; /* Flexコンテナを設定 */
+  flex-direction: row; /* 項目を横に並べる */
+  justify-content: center; /* 中央揃え */
+  flex-wrap: wrap; /* コンテンツが多い場合は折り返す */
+  transition: opacity 0.5s, transform 0.5s;
+  transform: translateY(-20px);
+}
+/* isActiveステートがtrueのときに適用されるクラス */
+.main-header nav ul.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.main-header nav ul li {
+  padding: 5px 10px; /* パディングを適用 */
+  white-space: nowrap; /* 折り返さずに1行で表示 */
+}
+
+/* スマートフォン用のメディアクエリ */
+@media (max-width: 768px) { /* 768px以下の画面幅で適用されるスタイル */
+  .main-header nav ul li a {
+    font-size: 0.7em; /* フォントサイズを小さくする */
+    padding: 8px; /* パディングを調整 */
+  }
+
+  /* 2段目のヘッダーのコンテナ自体のパディングも調整する場合 */
+  .main-header {
+    padding: 0.5em; /* トップとボトムのパディングを小さくする */
+  }
+
+  /* 2段目のヘッダーの項目間のマージンを調整する場合 */
+  .main-header nav ul li {
+    margin-right: 1px; /* マージンを狭める */
+    padding: 2px 2px; /* パディングを調整 */
+  }
+  /* 2段目のヘッダーの項目が折り返さないようにする */
+  .main-header nav ul {
+    padding-left: 1px;
+    padding-right: 2px;
+    flex-wrap: nowrap; /* 項目が折り返されないようにする */
+  }
+
+  /* 必要に応じて他のスタイルも追加 */
+}
+
+.bottom-fixed-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff; /* ここはサイトのテーマに合わせて調整してください */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* サブメニューが立体的に見えるように */
+  /* その他のスタイリングもここに追加 */
+}

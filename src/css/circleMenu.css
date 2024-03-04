@@ -1,0 +1,93 @@
+.circle-menu {
+    position: relative; /* 親要素を相対位置に設定 */
+    width: 100px;
+    height: 100px;
+    margin: 0 auto; /* 中央に配置するためのマージン設定 */
+    border-radius: 50%;
+    background-color: black;
+    transition: transform 0.3s ease;
+    
+  }
+  
+  .circle-menu:hover {
+    transform: scale(1.1); /* ホバー時に少し大きくする */
+  }
+  
+
+
+  /* 1個目の小さい円 (右側)*/
+  .small-circle {
+    position: absolute;
+    top: 50%;
+    left: 100%; /* 親円の右側に配置 */
+    transform: translate(40px, -50%); /* 小さい円を右に40px、上に50%ずらす */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    transition: transform 0.3s ease;
+    visibility: hidden; /* デフォルトでは非表示 */
+  }
+
+  .small-circle::after {
+    content: ''; /* 疑似要素の内容は空 */
+    position: absolute; /* 絶対位置を指定 */
+    top: 50%; /* 上から50%の位置に */
+    left: -50px; /* 左に20px（小さい円の左端から線を始める） */
+    width: 50px; /* 線の長さ */
+    border-top: 1px solid black; /* 上の境界線を線として使用 */
+    transform: translateY(-50%); /* 線を上に50%ずらす */
+    /* visibility: hidden; デフォルトでは非表示 */
+    /* 線の長さを調整する */
+    left: -90px; /* 左に90px（小さい円の左端から線を始める） */
+    width: 90px; /* 線の長さを90pxにする */
+  }
+  
+
+  .circle-menu:hover .small-circle {
+    visibility: visible; /* ホバー時に表示 */
+    transform: translate(80px, -50%); /* ホバー時に小さい円を右に80px、上に50%ずらす */
+  }
+
+  .circle-menu:hover .small-circle::after {
+    visibility: visible; /* ホバー時に線を表示 */
+  }
+
+
+/* 2個目の小さい円 (左側)*/
+  .second-circle {
+    position: absolute;
+    top: 50%;
+    left: 100%; /* 親円の右側に配置 */
+    transform: translateX(100%); /* 1個目の小さい円の幅分右にずらす */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    transition: transform 0.3s ease;
+    /* visibility: hidden; デフォルトでは非表示 */
+
+  }
+  
+  .second-circle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -50px; /* 1個目の小さい円の幅分右にずらす */
+    width: 50px; /* 線の長さ */
+    border-top: 1px solid black;
+    transform: translateY(-50%);
+    /* visibility: hidden; デフォルトでは非表示 */
+    left: -120px; /* 左に90px（小さい円の左端から線を始める） */
+    width: 120px; /* 線の長さを90pxにする */
+  }
+  
+  .circle-menu:hover .second-circle {
+    visibility: visible; /* ホバー時に表示 */
+    transform: translateX(450%) translateY(-50%); /* ホバー時に右にずらし、高さを中央に合わせる */
+  }
+  
+  .circle-menu:hover .second-circle::after {
+    visibility: visible; /* ホバー時に線を表示 */
+  }
+  

@@ -1,0 +1,8 @@
+/* Additional styles if needed */
+
+  .background-image {
+    background-image: url('../images/arkTitle.jpg'); /* 画像のパスを指定 */
+    background-size: cover; /* 画像がコンテナを覆うように設定 */
+    background-position: center; /* 画像が中央に来るように設定 */
+    background-repeat: no-repeat; /* 画像が繰り返されないように設定 */
+  }

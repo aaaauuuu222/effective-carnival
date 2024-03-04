@@ -1,0 +1,10 @@
+.social-media-windows {
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    left: 50%;
+    transform: translateX(-50%);
+    /* 他の必要なスタイルを追加 */
+}
